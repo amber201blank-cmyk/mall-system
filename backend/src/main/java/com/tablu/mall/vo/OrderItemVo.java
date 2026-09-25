@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+//用于展示订单内商品
 public class OrderItemVo {
 
     private Long orderNo;

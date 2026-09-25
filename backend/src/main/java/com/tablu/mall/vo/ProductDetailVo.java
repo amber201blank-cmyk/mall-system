@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+//用于展示商品详细数据
 public class ProductDetailVo {
 
     private Integer id;

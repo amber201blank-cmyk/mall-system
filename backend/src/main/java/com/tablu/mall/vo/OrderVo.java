@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+//用于展示整个订单
 public class OrderVo {
 
     private Long orderNo;

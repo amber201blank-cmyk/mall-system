@@ -5,6 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
+//种类
 public class CategoryVo {
 
     private Integer id;

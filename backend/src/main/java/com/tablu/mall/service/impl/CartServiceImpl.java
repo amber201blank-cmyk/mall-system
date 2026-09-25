@@ -41,6 +41,8 @@ public class CartServiceImpl implements CartService {
     @Autowired
     private StringRedisTemplate redisTemplate;
 
+    //从redis取购物车对象，空则返回空购物车，非空则取商品id列表从数据库取购物车里面的商品信息，
+    // 然后统计总商品数和已选择的商品的总价，同时返回商品列表，和是否全部选中封装成cartvo
     @Override
     public ResponseVo<CartVo> cartList(Integer userId) {
         String redisKey = String.format(CART_KEY, userId);

@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//用于展示购物车商品
 public class CartProductVo {
 
     private Integer productId;

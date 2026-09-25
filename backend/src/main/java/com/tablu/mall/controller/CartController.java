@@ -18,16 +18,19 @@ public class CartController {
     @Autowired
     private CartService cartService;
 
+    //返回当前用户购物车的信息
     @GetMapping("/carts")
     public ResponseVo<CartVo> list() {
         return cartService.cartList(getUserId());
     }
 
+    //将对应商品加入购物车
     @PostMapping("/carts")
     public ResponseVo<CartVo> add(@Valid @RequestBody CartAddForm cartAddForm) {
         return cartService.add(cartAddForm, getUserId());
     }
 
+    //
     @PutMapping("/carts/{productId}")
     public ResponseVo<CartVo> update(@PathVariable("productId") Integer productId, @RequestBody CartUpdateForm cartUpdateForm) {
         return cartService.update(cartUpdateForm, productId, getUserId());

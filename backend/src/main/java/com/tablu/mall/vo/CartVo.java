@@ -10,6 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//用于展示整个购物车
 public class CartVo {
 
     private List<CartProductVo> cartProductVoList;
